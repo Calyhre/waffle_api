@@ -9,7 +9,7 @@ _Waffle pool API gem_
 
 ## Installation
 
-### Ruby 1.9.3+, 2+
+### Ruby 2+
 
 ```ruby
 gem install waffle_api

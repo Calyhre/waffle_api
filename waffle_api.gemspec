@@ -9,6 +9,8 @@ Gem::Specification.new do |s|
   s.email        = ['contact@calyh.re']
   s.files        = `git ls-files`.split("\n")
   s.require_path = 'lib'
-  s.homepage     = 'http://rubygems.org/gems/waffle_api'
+  s.homepage     = 'http://github.com/Calyhre/waffle_api'
   s.license      = 'MIT'
+
+  s.required_ruby_version = '>= 2.0.0'
 end
