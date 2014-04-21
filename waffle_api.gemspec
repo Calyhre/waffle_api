@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name         = 'waffle_api'
   s.version      = WaffleAPI::VERSION
   s.summary      = 'Waffle pool API gem'
-  s.description  = s.summary
+  s.description  = 'Simple gem to make fast and cached calls to Wafflepool API'
   s.authors      = ['Calyhre']
   s.email        = ['contact@calyh.re']
   s.require_path = 'lib'
