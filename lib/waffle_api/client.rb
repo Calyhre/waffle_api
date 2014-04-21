@@ -1,5 +1,6 @@
 require 'waffle_api/helpers'
 require 'waffle_api/address_validator'
+require 'waffle_api/worker'
 
 module WaffleAPI
   # A Ruby class to call the Waffle stat API. You might use this if you want to
@@ -26,6 +27,17 @@ module WaffleAPI
 
     def hashrate
       stats 'hash_rate'
+    end
+
+    def workers
+      stats('worker_hashrates').map do |worker|
+        WaffleAPI::Worker.new(
+          name: worker['username'],
+          hash_rate: worker['hashrate'],
+          stale_rate: worker['stalerate'],
+          last_seen: worker['last_seen']
+        )
+      end
     end
 
     def method_missing(method, *args, &block)
