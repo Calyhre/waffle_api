@@ -3,7 +3,7 @@ module WaffleAPI
   class Balances
     attr_reader :sent, :confirmed, :unconverted, :expected
 
-    def initialize(sent:, confirmed:, unconverted:)
+    def initialize(sent: 0.0, confirmed: 0.0, unconverted: 0.0)
       @sent        = sent
       @confirmed   = confirmed
       @unconverted = unconverted
