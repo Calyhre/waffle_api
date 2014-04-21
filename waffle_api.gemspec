@@ -16,9 +16,9 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.0.0'
 
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'sinatra'
-  s.add_development_dependency 'webmock'
-  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'rake', '~> 10.3'
+  s.add_development_dependency 'rspec', '~> 2.14'
+  s.add_development_dependency 'sinatra', '~> 1.4'
+  s.add_development_dependency 'webmock', '~> 1.17'
+  s.add_development_dependency 'coveralls', '~> 0.7'
 end
