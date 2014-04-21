@@ -19,7 +19,7 @@ describe WaffleAPI::Client do
 
   describe 'with a valid address' do
     subject do
-      WaffleAPI::Client.new address: '1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
+      WaffleAPI::Client.new address: BTC_ADDRESS
     end
 
     describe 'asking for a non existing key' do

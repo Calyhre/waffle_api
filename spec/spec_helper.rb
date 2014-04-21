@@ -8,7 +8,8 @@ Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 
 WebMock.disable_net_connect! allow_localhost: true
 
-URL = 'http://wafflepool.com/tmp_api?address=1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
+BTC_ADDRESS = '1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
+URL = "http://wafflepool.com/tmp_api?address=#{BTC_ADDRESS}"
 
 def stub_waffle(response_class)
   stub_request(:any, URL).to_rack(response_class)
