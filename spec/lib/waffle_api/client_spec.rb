@@ -22,6 +22,16 @@ describe WaffleAPI::Client do
       WaffleAPI::Client.new address: BTC_ADDRESS
     end
 
+    describe 'but wafflepool has moved his api endpoint' do
+      it 'raises WaffleAPI::Error::EndPointMoved' do
+        stub_waffle_with Wafflepool::EndPointMoved
+
+        expect do
+          subject.hashrate
+        end.to raise_error(WaffleAPI::Error::EndPointMoved)
+      end
+    end
+
     describe 'which not exist on waffle' do
       it 'raises WaffleAPI::Error::AddressNotFound' do
         stub_waffle_with Wafflepool::AddressNotFound
