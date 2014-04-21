@@ -2,6 +2,7 @@ require 'waffle_api/helpers'
 require 'waffle_api/address_validator'
 require 'waffle_api/worker'
 require 'waffle_api/balances'
+require 'waffle_api/payment'
 
 module WaffleAPI
   # A Ruby class to call the Waffle stat API. You might use this if you want to
@@ -49,6 +50,16 @@ module WaffleAPI
         confirmed: balances['confirmed'],
         unconverted: balances['unconverted']
       )
+    end
+
+    def payments
+      stats('recent_payments').map do |payment|
+        WaffleAPI::Payment.new(
+          amount: payment['amount'],
+          paid_at: payment['time'],
+          transaction_hash: payment['txn']
+        )
+      end
     end
 
     def method_missing(method, *args, &block)
