@@ -1,0 +1,78 @@
+{
+  "hash_rate": 4303407,
+  "hash_rate_str": "4.30 MH\/s",
+  "worker_hashrates": [
+    {
+      "username": "1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V_calyhrerig1",
+      "hashrate": 2529705,
+      "stalerate": 3.33,
+      "last_seen": 1398022030,
+      "str": "2.53 MH\/s"
+    },
+    {
+      "username": "1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V_dqmsrig1",
+      "hashrate": 1773702,
+      "stalerate": 1.61,
+      "last_seen": 1398022030,
+      "str": "1.77 MH\/s"
+    }
+  ],
+  "balances": {
+    "sent": 1.61039009,
+    "confirmed": 0.00383488,
+    "unconverted": 0.011964213459441
+  },
+  "recent_payments": [
+    {
+      "amount": "0.01715311",
+      "time": "2014-04-20 16:03:24",
+      "txn": "8706e0a86042619c17fab11fc83c8ceb815bcbcf53a67863e60749050fb27660"
+    },
+    {
+      "amount": "0.01600557",
+      "time": "2014-04-20 04:36:01",
+      "txn": "258dda8330009d63aa78fef73cd9e079ece1f35ca7bd4d1f6426dba454a7dde1"
+    },
+    {
+      "amount": "0.03763282",
+      "time": "2014-04-19 16:07:02",
+      "txn": "3502be9939ab4b5e3478cded19b20946aa73af14b29e3697e8a321b82571e604"
+    },
+    {
+      "amount": "0.02660132",
+      "time": "2014-04-18 14:50:11",
+      "txn": "6cb1e2712945c859ff35d29cfe7171c96ef291fbcc22f3c2923903448eea588d"
+    },
+    {
+      "amount": "0.01660785",
+      "time": "2014-04-17 15:12:19",
+      "txn": "98b8f2c0b8bcb37c1d0bb22699460d332e6afdf6b73ae43fb5944d8ae16e87bc"
+    },
+    {
+      "amount": "0.02099343",
+      "time": "2014-04-16 19:59:53",
+      "txn": "bab1cd49c6b3e737a4c251e494bc65e524a85142f52c6e35051b1f13696527e6"
+    },
+    {
+      "amount": "0.02189502",
+      "time": "2014-04-15 20:40:48",
+      "txn": "8c89c55a9a3b5dc7c12cb0cad8aada7658d83fe8b3ba9a5d33f858f74afcfd03"
+    },
+    {
+      "amount": "0.02050877",
+      "time": "2014-04-14 19:19:21",
+      "txn": "35cbe9646810e59cd1747f380c019a6e43521c77e2f0537077be22877873dc12"
+    },
+    {
+      "amount": "0.01705158",
+      "time": "2014-04-13 15:19:52",
+      "txn": "63738d931504bca8aca6db6198ada4f3a96586ed2263866de38611edc4f462c6"
+    },
+    {
+      "amount": "0.01287918",
+      "time": "2014-04-12 15:50:52",
+      "txn": "78747c8cf856439b6d8d2ccb4595ab773ce0b1673c344bfb97a9dd0d2795ad50"
+    }
+  ],
+  "error": ""
+}
