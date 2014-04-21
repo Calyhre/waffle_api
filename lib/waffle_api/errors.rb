@@ -31,15 +31,6 @@ module WaffleAPI
       end
     end
 
-    # Error raised when https call Waffle returned a bad call
-    # It meens Waffle isn't supporting https right now.
-    class HttpsNotSupportedYet < Standard
-      def message
-        "Waffle pool isn\'t supporting https yet. Please use WaffleAPI " \
-        "without https_only argument."
-      end
-    end
-
     # Error raised when Waffle change his API endpoint. Nothing to do but
     # report an issue on this gem repo
     class EndPointMoved < Standard

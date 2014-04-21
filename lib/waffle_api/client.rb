@@ -17,7 +17,7 @@ module WaffleAPI
 
     attr_accessor :address, :https_only
 
-    def initialize(address: nil, https_only: false, ignore_bad_address: false)
+    def initialize(address: nil, ignore_bad_address: false)
       @address   = address || ENV['BTC_ADDRESS']
       @https_only = https_only
 

@@ -7,15 +7,11 @@ require 'uri'
 module WaffleAPI
   # List of helpers used in WaffleAPI
   module Helpers
-    WAFFLE_POOL_HOST = 'wafflepool.com'
     NOT_FOUND_ERROR = 'Invalid BTC Address!'
     INVALIDATION_TIME = 30 # Seconds
 
     def call_uri
-      URI(
-        "#{@https_only ? 'https' : 'http'}://#{WAFFLE_POOL_HOST}" \
-        "/tmp_api?address=#{@address}"
-      )
+      URI "#{WAFFLEPOOL_URL}#{WAFFLEPOOL_API_PATH}?address=#{@address}"
     end
 
     def request_json
