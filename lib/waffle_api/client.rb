@@ -21,7 +21,6 @@ module WaffleAPI
 
     def initialize(address: nil)
       @address   = address || ENV['BTC_ADDRESS']
-      @https_only = https_only
 
       fail Error::EmptyAddress if @address.nil? || @address.empty?
       fail Error::BadAddress, @address unless valid_address?
