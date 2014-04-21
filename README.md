@@ -109,7 +109,7 @@ Will return a JSON array containing the last 10 payments
 
 Released under the MIT License. See the [LICENSE](https://github.com/Calyhre/waffle_api/blob/master/LICENSE.md) file for further details.
 
-[travis_img]: https://travis-ci.org/Calyhre/waffle_api.png?branch=master
+[travis_img]: https://travis-ci.org/Calyhre/waffle_api.svg?branch=master
 [travis_url]: https://travis-ci.org/Calyhre/waffle_api
 [fury_img]: https://badge.fury.io/rb/waffle_api.png
 [fury_url]: http://badge.fury.io/rb/waffle_api
