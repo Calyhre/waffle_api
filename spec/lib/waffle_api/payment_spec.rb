@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe WaffleAPI::Payment do
-  subject { WaffleAPI::Payment.new }
+  subject { build :payment }
 
   it 'should have expected attributes' do
     subject.should respond_to :amount

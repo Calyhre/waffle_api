@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe WaffleAPI::Worker do
-  subject { WaffleAPI::Worker.new }
+  subject { build :worker }
 
   it 'should have expected attributes' do
     subject.should respond_to :name
