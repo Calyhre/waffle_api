@@ -17,14 +17,14 @@ module WaffleAPI
     include WaffleAPI::Helpers
     include WaffleAPI::AddressValidator
 
-    attr_accessor :address, :https_only
+    attr_accessor :address
 
-    def initialize(address: nil, ignore_bad_address: false)
+    def initialize(address: nil)
       @address   = address || ENV['BTC_ADDRESS']
       @https_only = https_only
 
       fail Error::EmptyAddress if @address.nil? || @address.empty?
-      fail Error::BadAddress, @address unless valid_address? || ignore_bad_address
+      fail Error::BadAddress, @address unless valid_address?
     end
 
     def hashrate
@@ -43,7 +43,7 @@ module WaffleAPI
     end
 
     def balances
-      balances = stats('balances')
+      balances = stats 'balances'
 
       WaffleAPI::Balances.new(
         sent: balances['sent'],
@@ -62,6 +62,7 @@ module WaffleAPI
       end
     end
 
+    # This is for not yet suported keys
     def method_missing(method, *args, &block)
       stats method.to_s
     rescue Error::UnknownKey
