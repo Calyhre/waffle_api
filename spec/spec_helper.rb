@@ -5,8 +5,10 @@ if ENV['TRAVIS']
   CodeClimate::TestReporter.start
 end
 
-require 'webmock/rspec'
 require 'waffle_api'
+require 'webmock/rspec'
+require 'faker'
+require 'factory_girl'
 
 Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 

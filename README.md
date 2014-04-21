@@ -23,81 +23,86 @@ client = WaffleAPI::Client.new address: '1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
 ```
 
 
-### Get current total hashrate
+### WaffleAPI::Client
 ```ruby
+# Hash rate in H/s
 client.hashrate
+#=> 1_234_567
+
+# List of all workers
+workers = client.workers
+#=> [ #<WaffleAPI::Worker>, #<WaffleAPI::Worker>, ... ]
+
+# Current balances
+balances = client.balances
+#=> #<WaffleAPI::Balances>
+
+# 10 last recent payments
+payments = client.payments
+#=> [ #<WaffleAPI::Payment>, #<WaffleAPI::Payment>, ... ]
 ```
 
-
-### Get workers infos
-
+### WaffleAPI::Worker
 ```ruby
-client.worker_hashrates
+worker = workers.first
+#=> #<WaffleAPI::Worker>
+
+# Worker name, without an underscore in it
+worker.name
+#=> 1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V
+
+# Worker name, with an underscore in it e.g: 1Ju8U...94V_worker0
+worker.name
+#=> worker0
+
+# Hash rate in H/s
+worker.hash_rate
+#=> 723_456
+
+# Stale rate in %
+worker.stale_rate
+#=> 3.6
+
+# Last seen
+worker.last_seen
+#=> 2014-03-13 20:22:42 +0100
 ```
 
-Will return a JSON array
-
-```json
-[
-  {
-    "username": "1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V_calyhrerig1",
-    "hashrate": 2529705,
-    "stalerate": 3.33,
-    "last_seen": 1398022030,
-    "str": "2.53 MH/s"
-  },
-  {
-    "username": "1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V_dqmsrig1",
-    "hashrate": 1773702,
-    "stalerate": 1.61,
-    "last_seen": 1398022030,
-    "str": "1.77 MH/s"
-  }
-]
-```
-
-
-### Get balances
-
+### WaffleAPI::Balances
 ```ruby
-client.balances
+# BTC already paid
+balances.sent
+#=> 1.623456
+
+# BTC confirmed but not yet paid
+balances.confirmed
+#=> 0.012345
+
+# BTC not yet converted (approximate)
+balances.unconverted
+#=> 0.012345
+
+# Expected BTC (confirmed + unconverted, approximate)
+balances.expected
+#=> 0.02469
 ```
 
-Will return a JSON array
-
-```json
-{
-  "sent": 1.61039009,
-  "confirmed": 0.00383488,
-  "unconverted": 0.011964213459441
-}
-```
-
-
-### Get payments
-
+### WaffleAPI::Payment
 ```ruby
-client.recent_payments
-```
+payment = payments.first
+#=> #<WaffleAPI::Payment>
 
-Will return a JSON array containing the last 10 payments
+# Payment amount
+payment.amount
+#=> 0.02469
 
-```json
-[
-  {
-    "amount": "0.01715311",
-    "time": "2014-04-20 16:03:24",
-    "txn": "8706e0a..."
-  },
-  {
-    "amount": "0.01600557",
-    "time": "2014-04-20 04:36:01",
-    "txn": "258dda8..."
-  },
-  {
-    "..."
-  }
-]
+# Payment paid date
+payment.paid_at
+#=> 2014-03-13 20:22:42 +0100
+
+# Payment transaction hash
+payment.transaction_hash
+#=> "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"
 ```
 
 
