@@ -22,10 +22,7 @@ module WaffleAPI
       fail Error::AddressNotFound, @address if json['error'] == NOT_FOUND_ERROR
       fail Error::UnknownError, json['error'] unless json['error'].empty?
       json.delete 'error'
-
-      return json
-    rescue OpenSSL::SSL::SSLError
-      raise Error::HttpsNotSupportedYet
+      json
     end
 
     def data_recent?

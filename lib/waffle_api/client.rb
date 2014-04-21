@@ -9,7 +9,6 @@ module WaffleAPI
   #
   #   require 'waffle_api'
   #   stats = WaffleAPI::Client.new address: '<BTC_ADDRESS_HERE>'
-  #   stats.create()
   #
   class Client
     include WaffleAPI::Helpers
