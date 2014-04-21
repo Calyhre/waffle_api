@@ -10,7 +10,7 @@ require 'waffle_api'
 
 Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 
-WebMock.disable_net_connect! allow_localhost: true
+WebMock.disable_net_connect! allow_localhost: true, allow: 'codeclimate.com'
 
 BTC_ADDRESS = '1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
 URL = "http://wafflepool.com/tmp_api?address=#{BTC_ADDRESS}"
