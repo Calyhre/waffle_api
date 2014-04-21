@@ -1,6 +1,7 @@
 require 'waffle_api/helpers'
 require 'waffle_api/address_validator'
 require 'waffle_api/worker'
+require 'waffle_api/balances'
 
 module WaffleAPI
   # A Ruby class to call the Waffle stat API. You might use this if you want to
@@ -38,6 +39,16 @@ module WaffleAPI
           last_seen: worker['last_seen']
         )
       end
+    end
+
+    def balances
+      balances = stats('balances')
+
+      WaffleAPI::Balances.new(
+        sent: balances['sent'],
+        confirmed: balances['confirmed'],
+        unconverted: balances['unconverted']
+      )
     end
 
     def method_missing(method, *args, &block)
