@@ -111,7 +111,7 @@ Released under the MIT License. See the [LICENSE](https://github.com/Calyhre/waf
 
 [travis_img]: https://travis-ci.org/Calyhre/waffle_api.svg?branch=master
 [travis_url]: https://travis-ci.org/Calyhre/waffle_api
-[fury_img]: https://badge.fury.io/rb/waffle_api.png
+[fury_img]: https://badge.fury.io/rb/waffle_api.svg
 [fury_url]: http://badge.fury.io/rb/waffle_api
 [code_climate_img]: https://codeclimate.com/github/Calyhre/waffle_api.png
 [code_climate_url]: https://codeclimate.com/github/Calyhre/waffle_api
