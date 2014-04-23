@@ -18,7 +18,7 @@ gem install waffle_api
 ## Usage
 
 ```ruby
-require 'waffle_pool'
+require 'waffle_api'
 client = WaffleAPI::Client.new address: '1Ju8U9Ukfc5kiMqzQrRgQBP1JvRkeSv94V'
 ```
 
