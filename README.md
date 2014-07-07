@@ -1,5 +1,7 @@
 # WaffleAPI
 
+[![Codeship Status][codeship_img]][codeship_url]
+
 [![Build Status][travis_img]][travis_url]
 [![Gem Version][fury_img]][fury_url]
 [![Code Climate][code_climate_img]][code_climate_url]
@@ -114,6 +116,8 @@ payment.transaction_hash
 
 Released under the MIT License. See the [LICENSE](https://github.com/Calyhre/waffle_api/blob/master/LICENSE.md) file for further details.
 
+[codeship_img]: https://www.codeship.io/projects/9f1058f0-e803-0131-219c-66a2774f0218/status
+[codeship_url]: https://www.codeship.io/projects/25980
 [travis_img]: https://travis-ci.org/Calyhre/waffle_api.svg?branch=master
 [travis_url]: https://travis-ci.org/Calyhre/waffle_api
 [fury_img]: https://badge.fury.io/rb/waffle_api.svg
